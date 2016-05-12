@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="styles/modules.css">
     <!-- Code Fellows favicon -->
     <link rel="icon" type="image/x-icon" href="https://i.imgur.com/7v5ASc8.png">
+
+    <script id="blog-template" type="text/x-handlebars-template">
+      <article class="template">
+        <header>
+          <h1>{{title}}</h1>
+          <div class="byline">
+            By<address><a href={{authorUrl}}>{{author}}</a>
+            </address>
+            Published<time pubdate datetime="2001-01-01">{{publishedOn}}</time>
+          </div>
+        </header>
+        <section class="article-body">
+          {{{body}}}
+        </section>
+      </article>
+    </script>
     <!--
       TODO: Complete this script tag below to hold the Handlebars template.
         - Be sure to give it a meaningful id attribute, and don't forget to specify the type!
@@ -22,7 +38,7 @@
           <h1>  </h1>
           <div class="byline">
             By <address><a href="  ">  </a></address>
-            
+
           </div>
         </header>
         <section class="article-body">  </section>
@@ -86,6 +102,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <!-- TODO: Include Handlebars.JS from a CDN -->
+    <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.5/handlebars.min.js"></script>
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
